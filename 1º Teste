@@ -1,0 +1,30 @@
+import 'dart:io';
+
+main(){
+
+//teste de obesidade
+//magro tem 60kg
+//> 60 < 80 sobrepeso
+//> 80 < 100 obeso 1
+//> 100 < 120 obeso 2
+//> 120 == obeso 3
+
+print("===Digite aqui seu peso===");
+var input = stdin.readLineSync();
+var peso = int.parse(input ?? "-1");
+
+if(peso <= 60){
+    print("Você é magro");
+} else if (peso > 60 && peso <= 80){
+    print("Você está em sobrepeso");
+} else if (peso > 80 && peso <= 100){
+    print("Você está obeso 1");
+} else if (peso > 100 && peso <= 120){
+    print ("Você está obeso 2");
+} else if (peso > 120){
+    print ("Você está em obesidade mórbida");
+} else{
+    print ("Houve algum erro, tente novamente");
+}
+
+}
