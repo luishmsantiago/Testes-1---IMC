@@ -1,0 +1,65 @@
+import 'dart:io';
+
+main(){
+
+print("===Calculadora de Notas para UNIVERSIDADES===");
+print("===Digite sua nota no trabalho 1===");
+var textTrabalho1 = stdin.readLineSync(); 
+var trabalho1 = int.parse (textTrabalho1 ?? "-1");
+
+print("===Digite porcentagem do Trabalho 1===");
+var textPorcentagem1 = stdin.readLineSync();
+var porcentagemtrabalho1 = int.parse (textPorcentagem1 ?? "-1");
+
+print("===Digite sua nota no trabalho 2===");
+var textTrabalho2 = stdin.readLineSync(); 
+var trabalho2 = int.parse (textTrabalho2 ?? "-1");
+
+print("===Digite porcentagem do Trabalho 2===");
+var textPorcentagem2 = stdin.readLineSync();
+var porcentagemtrabalho2 = int.parse (textPorcentagem2 ?? "-1");
+
+print("===Digite sua nota no trabalho 3===");
+var textTrabalho3 = stdin.readLineSync(); 
+var trabalho3 = int.parse (textTrabalho3 ?? "-1");
+
+print("===Digite porcentagem do Trabalho 2===");
+var textPorcentagem3 = stdin.readLineSync();
+var porcentagemtrabalho3 = int.parse (textPorcentagem3 ?? "-1");
+
+print("===Digite sua nota no Prova 1===");
+var textProva1 = stdin.readLineSync(); 
+var prova1 = int.parse (textProva1 ?? "-1");
+
+print("===Digite porcentagem da Prova 1===");
+var textPorcentagemProva1 = stdin.readLineSync();
+var porcentagemprova1 = int.parse (textPorcentagemProva1 ?? "-1");
+
+print("===Digite sua nota na Prova 2===");
+var textProva2 = stdin.readLineSync(); 
+var prova2 = int.parse (textProva2 ?? "-1");
+
+print("===Digite porcentagem do Prova 2===");
+var textPorcentagemProva2 = stdin.readLineSync();
+var porcentagemprova2 = int.parse (textPorcentagemProva2 ?? "-1");
+
+
+var calcNOTAS = (trabalho1 * porcentagemtrabalho1 / 100) + (trabalho2 * porcentagemtrabalho2 / 100) + (trabalho3 * porcentagemtrabalho3 / 100) + (prova1 * porcentagemprova1 / 100) + (prova1 * porcentagemprova2 / 100); {
+print ("====================");
+}
+
+print(calcNOTAS);
+
+if(calcNOTAS == 10){
+    print("nota máxima");
+} else if (calcNOTAS > 7 && calcNOTAS > 9.9){
+    print("Você está acima da média");
+} else if (calcNOTAS == 7){
+    print("Você está na média");
+} else if (calcNOTAS < 6.9){
+    print ("Você está abaixo da média");
+} else{
+    print ("Houve algum erro, tente novamente");
+}
+
+}
