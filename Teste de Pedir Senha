@@ -1,0 +1,21 @@
+import 'dart:io';
+
+main(){
+
+    bool condicao = true;
+    int x = 0;
+
+print("===Digite a senha===");
+
+    while(condicao){
+        String text = stdin.readLineSync() ?? '';
+        if (text == "testesenha"){
+            condicao = false;
+        print("===Acesso Autorizado ===");
+        } else{
+        print("Você digitou $text");
+        print("Dica: Somente letras e 10 digitos");
+        }
+    }
+
+}
